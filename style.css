@@ -1,0 +1,96 @@
+
+/*  page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(29, 19, 19);
+}
+
+
+/* Animation for moving text from left to right */
+@keyframes moveText {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    100% {
+        transform: translateX(100%); /* Move off-screen to the right */
+    }
+}
+
+/* Apply the animation to the h1 */
+h1 {
+    position: relative;
+    font-size: 2rem; /* Adjust the size as needed */
+    animation: moveText 10s linear infinite; /* 10s duration, linear speed, and infinite looping */
+    white-space: nowrap; /* Prevent the text from wrapping */
+    overflow: hidden;
+}
+
+
+
+.search-bar {
+    text-align: center;
+    margin: 20px;
+    
+}
+
+.search-bar input {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Grid styling */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(69, 69, 223);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 150px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: rgb(9, 239, 9);
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
